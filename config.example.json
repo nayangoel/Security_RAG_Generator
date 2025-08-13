@@ -1,0 +1,47 @@
+{
+  "data_folder": "./documents",
+  "vector_store_path": "./faiss_store",
+  "cache_path": "./file_cache.json",
+  
+  "text_processing": {
+    "chunk_size": 1000,
+    "chunk_overlap": 200,
+    "max_file_size_mb": 1,
+    "encodings": ["utf-8", "utf-16", "latin-1", "cp1252"]
+  },
+  
+  "file_extensions": {
+    "text": [".md", ".txt", ".rst", ".adoc"],
+    "code": [".py", ".js", ".java", ".c", ".cpp", ".ts", ".tsx", ".jsx", ".go", ".rs", ".rb", ".php", ".cs", ".swift", ".kt", ".scala", ".r", ".sql"],
+    "image": [".png", ".jpg", ".jpeg", ".gif", ".bmp", ".tiff"],
+    "csv": [".csv", ".tsv"]
+  },
+  
+  "embeddings": {
+    "openai_model": "text-embedding-ada-002",
+    "huggingface_model": "sentence-transformers/all-MiniLM-L6-v2",
+    "device": "cpu"
+  },
+  
+  "llm": {
+    "anthropic_model": "claude-3-sonnet-20240229",
+    "openai_model": "gpt-3.5-turbo",
+    "temperature": 0
+  },
+  
+  "retrieval": {
+    "search_type": "similarity",
+    "k": 5,
+    "content_preview_length": 200
+  },
+  
+  "api": {
+    "host": "localhost",
+    "port": 50001,
+    "debug": false
+  },
+  
+  "csv_processing": {
+    "preview_rows": 10
+  }
+}
